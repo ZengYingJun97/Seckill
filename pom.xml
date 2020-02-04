@@ -99,45 +99,45 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>5.1.10.RELEASE</version>
+            <version>5.1.13.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework </groupId>
             <artifactId>spring-beans</artifactId>
-            <version>5.1.10.RELEASE</version>
+            <version>5.1.13.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.1.10.RELEASE</version>
+            <version>5.1.13.RELEASE</version>
         </dependency>
         <!-- 2)Spring Dao层依赖 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>5.1.10.RELEASE</version>
+            <version>5.1.13.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>5.1.10.RELEASE</version>
+            <version>5.1.13.RELEASE</version>
         </dependency>
         <!-- 3)Spring Web层依赖 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>5.1.10.RELEASE</version>
+            <version>5.1.13.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.1.10.RELEASE</version>
+            <version>5.1.13.RELEASE</version>
         </dependency>
         <!-- 4)Spring test层依赖 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>5.1.10.RELEASE</version>
+            <version>5.1.13.RELEASE</version>
         </dependency>
     </dependencies>
 
