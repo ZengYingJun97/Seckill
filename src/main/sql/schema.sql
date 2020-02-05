@@ -30,7 +30,7 @@ values
 
 --创建秒杀成功明细表
 --用户登陆认证相关的信息
-create table success_kill(
+create table success_killed(
     `seckill_id` bigint not null comment '秒杀商品id',
     `user_phone` bigint not null comment '用户手机号',
     `state` tinyint not null default -1 comment '状态表示：-1:无效 0：成功 1：已付款 2：已发货',

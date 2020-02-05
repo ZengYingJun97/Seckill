@@ -14,10 +14,10 @@ public interface SuccessKilledDao {
 	 * @date 2020/02/05 18:32:42
 	 * @author handsome
 	 * @param seckillId
-	 * @param usePhone
+	 * @param userPhone
 	 * @return int
 	 */        
-	int insertSuccessKilled(long seckillId, long usePhone);
+	int insertSuccessKilled(long seckillId, long userPhone);
 
 	/**
 	 * 通过id查询SuccessKilled并携带秒杀产品对象实体
