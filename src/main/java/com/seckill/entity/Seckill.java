@@ -3,7 +3,9 @@ package com.seckill.entity;
 import java.util.Date;
 
 /**
- * Create by ZengYingJun97 on 20/02/05
+ * Seckill
+ * @author handsome
+ * @date 2020年 02月05日 18:28:05
  */
 public class Seckill {
 
