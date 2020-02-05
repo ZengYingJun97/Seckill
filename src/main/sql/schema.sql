@@ -16,8 +16,8 @@ create table seckill(
     primary key (seckill_id),
     key idx_start_time(start_time),
     key idx_end_time(end_time),
-    key idx_create_time(create_time),
-)engine=InnoDB charset=utf8 comment='秒杀库存表';
+    key idx_create_time(create_time)
+)engine=innodb charset=utf8 comment='秒杀库存表';
 
 --初始化数据
 insert into
@@ -36,6 +36,5 @@ create table success_kill(
     `state` tinyint not null default -1 comment '状态表示：-1:无效 0：成功 1：已付款 2：已发货',
     `create_time` timestamp not null default current_timestamp comment '创建时间',
     primary key (seckill_id, user_phone), /*联合主键*/
-    key idx_create_time(create_time),
-
-)engine=InnoDB default charset=utf8 comment='秒杀成功明细表';
+    key idx_create_time(create_time)
+)engine=innodb charset=utf8 comment='秒杀成功明细表';
