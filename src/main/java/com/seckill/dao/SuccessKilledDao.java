@@ -1,6 +1,7 @@
 package com.seckill.dao;
 
 import com.seckill.entity.SuccessKilled;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * SuccessKilledDao
@@ -17,7 +18,7 @@ public interface SuccessKilledDao {
 	 * @param userPhone
 	 * @return int
 	 */        
-	int insertSuccessKilled(long seckillId, long userPhone);
+	int insertSuccessKilled(@Param("seckillId") long seckillId, @Param("userPhone") long userPhone);
 
 	/**
 	 * 通过id查询SuccessKilled并携带秒杀产品对象实体
