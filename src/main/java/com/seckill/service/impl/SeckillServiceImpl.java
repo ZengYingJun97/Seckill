@@ -13,6 +13,9 @@ import com.seckill.exception.SeckillException;
 import com.seckill.service.SeckillService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
 import java.util.Date;
@@ -24,12 +27,16 @@ import java.util.List;
  * @author handsome
  * @date 2020年 02月06日 22:08:27
  */
+@Service
 public class SeckillServiceImpl implements SeckillService {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+	//注入Service依赖
+	@Autowired
 	private SeckillDao seckillDao;
 
+	@Autowired
 	private SuccessKilledDao successKilledDao;
 
 	//混淆md5
@@ -68,6 +75,7 @@ public class SeckillServiceImpl implements SeckillService {
 	}
 
 	@Override
+	@Transactional
 	public SeckillExecution executeSeckill(long seckillId, long userPhone, String md5)
 			throws SeckillException, RepeatKillException, SeckillCloseException {
 		if (md5 == null || !md5.equals(getMD5(seckillId))) {
