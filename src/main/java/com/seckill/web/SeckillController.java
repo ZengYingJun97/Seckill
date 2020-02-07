@@ -31,14 +31,14 @@ public class SeckillController {
 	@Autowired
 	private SeckillService seckillService;
 
-	@RequestMapping(name = "/list", method = RequestMethod.GET)
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String list(Model model) {
 		List<Seckill> list = seckillService.getSeckillList();
 		model.addAttribute("list", list);
 		return "list";
 	}
 
-	@RequestMapping(value = "/{seckillId}/detaill", method = RequestMethod.GET)
+	@RequestMapping(value = "/{seckillId}/detail", method = RequestMethod.GET)
 	public String detail(@PathVariable("seckillId") Long seckillId, Model model) {
 		if (seckillId == null) {
 			return "redirect:/seckill/list";
@@ -52,7 +52,7 @@ public class SeckillController {
 	}
 
 	//ajax json
-	@RequestMapping(value = "/{seckillId/exposer}",
+	@RequestMapping(value = "/{seckillId}/exposer",
 			method = RequestMethod.POST,
 			produces = {"application/json;charset=UTF-8"})
 	@ResponseBody
@@ -94,6 +94,7 @@ public class SeckillController {
 	}
 
 	@RequestMapping(value = "/time/now", method = RequestMethod.GET)
+	@ResponseBody
 	public SeckillResult<Long> time() {
 		Date now = new Date();
 		return new SeckillResult<>(true, now.getTime());
