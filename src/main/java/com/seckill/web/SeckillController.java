@@ -38,7 +38,7 @@ public class SeckillController {
 		return "list";
 	}
 
-	@RequestMapping(value = "/{seckillId}/detaill", method = RequestMethod.GET)
+	@RequestMapping(value = "/{seckillId}/detail", method = RequestMethod.GET)
 	public String detail(@PathVariable("seckillId") Long seckillId, Model model) {
 		if (seckillId == null) {
 			return "redirect:/seckill/list";
