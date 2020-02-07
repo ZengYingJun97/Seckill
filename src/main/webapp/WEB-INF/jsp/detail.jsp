@@ -57,7 +57,12 @@
         </div>
     </div>
 </body>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
+<!-- 使用CDN 获取公共js http://www.bootcdn.cn/ -->
 <!-- jQuery cookie操作插件 -->
 <script src="http://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <!-- jQuery countDown倒计时插件 -->
@@ -66,12 +71,13 @@
 <!-- 交互逻辑 -->
 <script src="/resources/script/seckill.js" type="text/javascript"></script>
 <script type="text/javascript">
-    $(function() {
-       seckill.detail.init({
-           seckillId : ${seckill.seckillId},
-           startTime : ${seckill.startTime.time},
-           endTime : ${seckill.endTime.time}
-       });
+    $(function () {
+        //使用EL表达式传入参数
+        seckill.detail.init({
+            seckillId : ${seckill.seckillId},
+            startTime : ${seckill.startTime.time},//转为毫秒
+            endTime : ${seckill.endTime.time}
+        });
     });
 </script>
 </html>
