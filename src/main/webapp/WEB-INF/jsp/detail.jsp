@@ -39,8 +39,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-xs-8 col-xs-offset-2">
-                            <input type="text" name="killPhone" id="killPhoneKey"
-                                   placeholder="填手机号" class="form-control"/>
+                            <input type="text" name="killPhone" id="killPhoneKey" placeholder="填手机号" class="form-control"/>
                         </div>
                     </div>
                 </div>

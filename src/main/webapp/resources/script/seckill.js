@@ -102,16 +102,18 @@ var seckill = {
             if (!seckill.validatePhone(killPhone)) {
                 //绑定phone
                 var killPhoneModal = $('#killPhoneModal');
+                //显示弹出层
                 killPhoneModal.modal({
-                    show: true,
-                    backdrop: 'static',
-                    keyboard: false
+                    show: true,//显示弹出层
+                    backdrop: 'static',//禁止位置关闭
+                    keyboard:false//关闭键盘事件
                 });
                 $('#killPhoneBtn').click(function () {
                     var inputPhone = $('#killPhoneKey').val();
-                    if (seckill.validatePhone(inputPhone)) {
+                    if (seckill.validatePhone(inputPhone)){
+                        //电话写入cookie
+                        $.cookie('killPhone', inputPhone, {expires: 7, path: '/seckill'});
                         //刷新页面
-                        $.cookie('killPhone', inputPhone, {expires: 7, path: '/seckill'})
                         window.location.reload();
                     } else {
                         $('#killPhoneMessage').hide().html('<label class="label label-danger">手机号错误!</label>').show(300);
@@ -123,6 +125,7 @@ var seckill = {
             var endTime = params['endTime'];
             var seckillId = params['seckillId'];
             $.get(seckill.URL.now(), {}, function (result) {
+                console.log(result);
                 if (result && result['success']){
                     var nowTime = result['data'];
                     //时间判断，计时交互

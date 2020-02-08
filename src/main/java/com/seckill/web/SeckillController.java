@@ -56,7 +56,7 @@ public class SeckillController {
 			method = RequestMethod.POST,
 			produces = {"application/json;charset=UTF-8"})
 	@ResponseBody
-	public SeckillResult<Exposer> exposer(Long seckillId) {
+	public SeckillResult<Exposer> exposer(@PathVariable("seckillId") Long seckillId) {
 		SeckillResult<Exposer> result;
 		try {
 			Exposer exposer = seckillService.exportSeckillUrl(seckillId);
